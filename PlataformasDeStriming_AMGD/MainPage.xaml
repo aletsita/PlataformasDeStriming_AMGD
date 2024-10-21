@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlataformasDeStriming_AMGD.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Ingrese el nombre del streamer:"
+               FontSize="22"
+               HorizontalOptions="Center" Margin="18"/>
+
+        <Entry x:Name="streamerNameEntry"
+               Placeholder="Nombre del streamer"
+               FontSize="Medium" />
+
+        <Button Text="Buscar"
+                TextColor="Black"
+                BackgroundColor="Aqua"
+                Clicked="OnSearchButtonClicked"
+                HorizontalOptions="Center" x:Name="Boton" IsEnabled="True"/>
+
+        <Label x:Name="streamStatusLabel"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               TextColor="Red"
+               IsVisible="False" />
+
+        <WebView x:Name="streamWebView" 
+                 HeightRequest="400" 
+                 IsVisible="False" />
+
+        <Button Text="Cerrar"
+        Clicked="CloseWebViewClicked"
+        HorizontalOptions="Center" x:Name="Boton2" IsVisible="false"/>
+
+
+    </StackLayout>
+</ContentPage>
